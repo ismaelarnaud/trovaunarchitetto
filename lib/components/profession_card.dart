@@ -19,7 +19,7 @@ class ProfessionCard extends StatelessWidget {
         Container(
           height: cardHeight,
           width: cardWidth,
-          margin: EdgeInsets.all(20.0),
+          margin: const EdgeInsets.all(20.0),
           decoration: BoxDecoration(
               color: Colors.purpleAccent,
               borderRadius: BorderRadius.circular(10.0),
@@ -31,7 +31,7 @@ class ProfessionCard extends StatelessWidget {
         ),
         const SizedBox(height: 10.0,),
         Container(
-          margin: EdgeInsets.only(left: 20.0),
+          margin: const EdgeInsets.only(left: 20.0),
           child: Text(profession,
             style: const TextStyle(
                 fontSize: 15.0,

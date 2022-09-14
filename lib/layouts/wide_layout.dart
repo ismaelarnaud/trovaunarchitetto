@@ -41,83 +41,13 @@ class WideLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            padding: EdgeInsets.all(30.0),
-            decoration: BoxDecoration(
-              border: Border(
-                bottom: BorderSide(
-                  color: Colors.grey.withOpacity(0.2)
-                )
-              )
-            ),
-            height: 500.0,
-            child: Column(
-              children: [
-                const CustomNavBar(),
-                const SizedBox(
-                  height: 200.0,
-                ),
-                const Text("Trova subito il tuo architetto ",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: .7,
-                      fontSize: 35.0
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const SearchBar(completeSearchBar: true),
-                /*const SizedBox(
-                  height: 100,
-                ),*/
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.all(50.0),
-            height: 1000.0,
-            child: Column(
-              children: [
-                Container(
-                  padding: EdgeInsets.only(left: 205.0),
-                  child: Row(
-                    children: [
-                      Text("Un esperto per ogni esigenza",
-                        style: const TextStyle(
-                            fontSize: 28.0,
-                            fontWeight: FontWeight.w500
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: kProfessionCards,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            height: 1000.0,
-            child: Placeholder(),
-          ),
-          Container(
-            height: 500.0,
-            child: Placeholder(),
-          )
-        ],
-      ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+
+      ],
     );
   }
 }

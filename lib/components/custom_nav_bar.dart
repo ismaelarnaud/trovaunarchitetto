@@ -24,6 +24,7 @@ class CustomNavBar extends StatelessWidget {
         ),
         Row(
           children: const [
+            SizedBox(width: 200.0,),
             HoverableButton(buttonText: "Come funziona",style: CustomAppBarConstants.kActionsPageButtonStyle, buttonSize: CustomAppBarConstants.kActionsButtonSize, buttonType: CustomAppBarConstants.kActionsButton,),
             SizedBox(width: 20.0,),
             HoverableButton(buttonText: "Chi siamo",style: CustomAppBarConstants.kActionsPageButtonStyle, buttonSize: CustomAppBarConstants.kActionsButtonSize, buttonType: CustomAppBarConstants.kActionsButton,),

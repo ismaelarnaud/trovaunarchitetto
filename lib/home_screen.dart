@@ -23,30 +23,49 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [
-                    Color(0x00f3e5f5),
-                    Color(0x00e1bee7),
-                    Color(0x00ce93d8),
-                    Color(0x00ba68c8),
-                  ]
-              )
+      backgroundColor: const Color(0xff251762),
+      appBar: AppBar(
+        backgroundColor: const Color(0xff251762),
+        title: const Text('TrovaUnArchitetto.it',
+          style: TextStyle(
+            color: Color(0xffE2C5DE),
+            fontWeight: FontWeight.bold
           ),
-        child: SafeArea(
-            child: LayoutBuilder(
-              builder: (context,constraints) {
-                if(constraints.maxWidth > 1080){
-                    print('MaxWidth = ${constraints.maxWidth}');
-                  return const WideLayout();
-                }else if (constraints.maxWidth < 300){
-                  return const MobileLayout();
-                }
-                return const NarrowLayout();
-              }
-            )
         ),
+        actions: [
+          TextButton(
+              onPressed: () {},
+              child: Text('Chi siamo', style: TextStyle(color: Colors.white.withOpacity(0.5)),)
+          ),
+          TextButton(
+              onPressed: () {},
+              child: Text('Registrati', style: TextStyle(color: Colors.white.withOpacity(0.5)),)
+          ),
+          TextButton(
+              onPressed: () {},
+              child: Text('Accedi', style: TextStyle(color: Colors.white.withOpacity(0.5)),)
+          ),
+        ],
+      ),
+      body: SafeArea(
+          child: LayoutBuilder(
+            builder: (context,constraints) {
+              if(constraints.maxWidth > 1080){
+                  print('MaxWidth = ${constraints.maxWidth}');
+                return const WideLayout();
+              }else if (constraints.maxWidth < 300){
+                return const MobileLayout();
+              }
+              return const NarrowLayout();
+            }
+          )
+      ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+
+          },
+        backgroundColor: Colors.white,
+        child: Icon(Icons.message,size: 30,color: Colors.black,),
       ),
     );
   }
