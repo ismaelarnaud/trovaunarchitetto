@@ -20,26 +20,40 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<String> professions = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff251762),
       appBar: AppBar(
         backgroundColor: const Color(0xff251762),
-        title: const Text('TrovaUnArchitetto.it',
-          style: TextStyle(
-            color: Color(0xffE2C5DE),
-            fontWeight: FontWeight.bold
+        title: TextButton(
+          style: ButtonStyle(
+
+          ),
+          onPressed: () {
+
+          },
+          child: const Text('TrovaUnArchitetto.it',
+            style: TextStyle(
+                color: Color(0xffE2C5DE),
+                fontWeight: FontWeight.bold,
+              fontSize: 30.0
+            ),
           ),
         ),
         actions: [
           TextButton(
               onPressed: () {},
-              child: Text('Chi siamo', style: TextStyle(color: Colors.white.withOpacity(0.5)),)
+              child: Text('Professionisti', style: TextStyle(color: Colors.white.withOpacity(0.5)),)
           ),
           TextButton(
               onPressed: () {},
-              child: Text('Registrati', style: TextStyle(color: Colors.white.withOpacity(0.5)),)
+              child: Text('Progetti', style: TextStyle(color: Colors.white.withOpacity(0.5)),)
+          ),
+          TextButton(
+              onPressed: () {},
+              child: Text('Chi siamo', style: TextStyle(color: Colors.white.withOpacity(0.5)),)
           ),
           TextButton(
               onPressed: () {},
@@ -54,9 +68,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   print('MaxWidth = ${constraints.maxWidth}');
                 return const WideLayout();
               }else if (constraints.maxWidth < 300){
-                return const MobileLayout();
+                //return const MobileLayout();
+                //TODO
+                return const WideLayout();
               }
-              return const NarrowLayout();
+              //return const NarrowLayout();
+              //TODO
+              return const WideLayout();
             }
           )
       ),

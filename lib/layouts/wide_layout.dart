@@ -41,13 +41,191 @@ class WideLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
+    return SingleChildScrollView(
+      child: SizedBox(
+      height: 1400.0,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 120.0),
+          //padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Container(
+                  margin: EdgeInsets.all(10.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 3,
+                          child: Container(
+                            padding: EdgeInsets.only(left: 100.0),
+                            decoration: const BoxDecoration(
+                                color: Color(0xffE2C5DE),
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(12.0),
+                                    bottomLeft: Radius.circular(12.0)
+                                )
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text("Professionisti",
+                                  style: TextStyle(
+                                    fontSize: 35.0
+                                  ),
+                                ),
+                                Text("Con TrovaUnArchitetto trovi i migliori architetti"
+                                    "\nnella tua città, per tutte le tue esigenze",
+                                  style: TextStyle(
+                                      fontSize: 20.0
+                                  ),
+                                ),
+                                Text("Il servizio è gratuito e senza impegni",
+                                  style: TextStyle(
+                                      fontSize: 20.0
+                                  ),
+                                ),
+                                ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
 
-      ],
+                                  ),
+                                    onPressed: () {
+
+                                    },
+                                    child: Text("Cerca un professionista")
+                                )
+                              ],
+                            ),
+                          )
+                      ),
+                      Expanded(
+                        flex: 5,
+                          child: Container(
+                            decoration: const BoxDecoration(
+                                color: Colors.purpleAccent,
+                                borderRadius: BorderRadius.only(topRight: Radius.circular(12.0), bottomRight: Radius.circular(12.0)),
+                              image: DecorationImage(
+                                fit: BoxFit.fitWidth,
+                                  image: AssetImage('images/graphic_design.jpg')
+                              ),
+                            ),
+                          )
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  margin: EdgeInsets.all(10.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          flex: 3,
+                          child: Container(
+                            padding: EdgeInsets.only(left: 100.0),
+                            decoration: const BoxDecoration(
+                                color: Color(0xffE2C5DE),
+                                borderRadius: BorderRadius.only(topLeft: Radius.circular(12.0), bottomLeft: Radius.circular(12.0))
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Progetti",
+                                  style: TextStyle(
+                                      fontSize: 35.0
+                                  ),
+                                ),
+                                Text("Con TrovaUnArchitetto trovi i migliori architetti"
+                                    "\nnella tua città, per tutte le tue esigenze"),
+                                Text("Il servizio è gratuito e senza impegni"),
+                                ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+
+                                    ),
+                                    onPressed: () {
+
+                                    },
+                                    child: Text("Scopri i nostri progetti")
+                                )
+                              ],
+                            ),
+                          )
+                      ),
+                      Expanded(
+                          flex: 5,
+                          child: Container(
+                            decoration: const BoxDecoration(
+                                color: Colors.purpleAccent,
+                                borderRadius: BorderRadius.only(topRight: Radius.circular(12.0), bottomRight: Radius.circular(12.0))
+                            ),
+                            child: Placeholder(),
+                          )
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  margin: EdgeInsets.all(10.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          flex: 3,
+                          child: Container(
+                            padding: EdgeInsets.only(left: 100.0),
+                            decoration: const BoxDecoration(
+                                color: Color(0xffE2C5DE),
+                                borderRadius: BorderRadius.only(topLeft: Radius.circular(12.0), bottomLeft: Radius.circular(12.0))
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text("Chi siamo",
+                                  style: TextStyle(
+                                      fontSize: 35.0
+                                  ),
+                                ),
+                                Text("Con TrovaUnArchitetto trovi i migliori architetti"
+                                    "\nnella tua città, per tutte le tue esigenze"),
+                                Text("Il servizio è gratuito e senza impegni"),
+                                ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+
+                                    ),
+                                    onPressed: () {
+
+                                    },
+                                    child: Text("Scopri il team")
+                                )
+                              ],
+                            ),
+                          )
+                      ),
+                      Expanded(
+                          flex: 5,
+                          child: Container(
+                            decoration: const BoxDecoration(
+                                color: Colors.purpleAccent,
+                                borderRadius: BorderRadius.only(topRight: Radius.circular(12.0), bottomRight: Radius.circular(12.0))
+                            ),
+                            child: Placeholder(),
+                          )
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      )
     );
   }
 }
